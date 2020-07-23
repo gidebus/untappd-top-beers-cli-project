@@ -1,0 +1,2 @@
+class UntappdTopBeers::Beer
+end
