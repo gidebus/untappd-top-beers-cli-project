@@ -24,7 +24,6 @@ class UntappdTopBeers::CLI
         end
     end
 
-
     def print_beer(beer)
         puts ""
         puts "----------- #{beer.name} ------------"
@@ -74,5 +73,4 @@ class UntappdTopBeers::CLI
         end
     end
      
-
 end
