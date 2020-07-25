@@ -10,6 +10,7 @@ class UntappdTopBeers::CLI
 
     def select_display
         puts "How would you like the beers displayed by?"
+        puts ""
         puts "name"
         puts "style"
         puts "brewery"
