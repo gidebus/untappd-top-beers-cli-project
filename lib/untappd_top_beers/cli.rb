@@ -22,4 +22,25 @@ class UntappdTopBeers::CLI
         puts ""
       end
 
+    def print_styles
+        styles =[]
+        UntappdTopBeers::Beer.self.all.each do |beer|
+            styles << beer.style
+        end
+        styles.uniq.each do |style|
+            puts style
+        end
+    end
+
+    def print_breweries
+        breweries =[]
+        UntappdTopBeers::Beer.self.all.each do |beer|
+            breweries << beer.brewery
+        end
+        breweries.uniq.each do |brewery|
+            puts brewery
+        end
+    end
+     
+
 end
