@@ -22,7 +22,7 @@ class UntappdTopBeers::CLI
         puts ""
       end
 
-    def print_beers
+    def print_names
         UntappdTopBeers::Beer.self.all.each do |beer|
             puts beer.name
         end
