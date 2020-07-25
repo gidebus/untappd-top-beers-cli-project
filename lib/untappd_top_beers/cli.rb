@@ -1,7 +1,8 @@
 class UntappdTopBeers::CLI
     
-    def welcome
+    def call
         puts "Welcome to Untappd's top 50 beers!"
+        #displays list of 50 beers
     end
 
     def print_beer(beer)

@@ -25,6 +25,18 @@ class UntappdTopBeers::Beer
         end
     end
 
+    def find_by_brewery(brewery)
+        @@all.select do |brewery|
+            beer.brewery == brewery
+        end
+    end
+
+    def find_by_style(style)
+        @@all.select do |style|
+            beer.style.include?(style)
+        end
+    end
+
     def new_from_index_page(beer)
         self.new(
             beer.css("div.beer-details p.name").text,

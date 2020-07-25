@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../lib/untappd_top_beers'
 
-UntappdTopBeers::CLI.new.welcome
+UntappdTopBeers::CLI.new.call
+
