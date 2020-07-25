@@ -2,8 +2,26 @@ class UntappdTopBeers::CLI
     
     def call
         puts "Welcome to Untappd's top 50 beers!"
+        UntappdTopBeers::Scraper.create_beers
+        select_display
         #displays list of 50 beers
     end
+
+    def select_display
+        puts "How would you like the beers displayed by?"
+        puts "name"
+        puts "style"
+        puts "brewery"
+        selection = gets.strip
+        if selection == "name"
+            print_names
+        elsif selection == "style"
+            print_styles
+        elsif selection == "brewery"
+            print_breweries
+        end
+    end
+
 
     def print_beer(beer)
         puts ""
