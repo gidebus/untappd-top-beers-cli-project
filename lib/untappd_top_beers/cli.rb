@@ -1,9 +1,9 @@
 class UntappdTopBeers::CLI
     
     def call
+        UntappdTopBeers::Scraper.new.create_beers
         puts "Welcome to Untappd's top 50 beers!"
-        UntappdTopBeers::Scraper.create_beers
-        select_display
+        #select_display
         #displays list of 50 beers
     end
 
@@ -38,7 +38,7 @@ class UntappdTopBeers::CLI
         puts ""
         puts "#{beer.description}"
         puts ""
-      end
+    end
 
     def print_names
         UntappdTopBeers::Beer.self.all.each do |beer|

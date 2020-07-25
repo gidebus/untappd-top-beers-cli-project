@@ -13,7 +13,7 @@ class UntappdTopBeers::Scraper
     end
 
     def create_beers
-        index_page.each do |beer|
+        scrape_index_page.each do |beer|
             UntappdTopBeers::Beer.new_from_index_page(beer)
         end
     end

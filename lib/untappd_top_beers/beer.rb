@@ -1,6 +1,6 @@
 class UntappdTopBeers::Beer
 
-    attr_accessor :name, :brew, :brewery, :description, :score 
+    attr_accessor :name, :brewery, :style, :description, :alcohol_content, :score, :ratings
 
     @@all = []
 
@@ -37,7 +37,7 @@ class UntappdTopBeers::Beer
         end
     end
 
-    def new_from_index_page(beer)
+    def self.new_from_index_page(beer)
         self.new(
             beer.css("div.beer-details p.name").text,
             beer.css("div.beer-details").css("p")[1].text,
