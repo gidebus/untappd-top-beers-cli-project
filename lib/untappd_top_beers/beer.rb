@@ -26,13 +26,13 @@ class UntappdTopBeers::Beer
     end
 
     def find_by_brewery(brewery)
-        @@all.select do |brewery|
+        @@all.select do |beer|
             beer.brewery == brewery
         end
     end
 
     def find_by_style(style)
-        @@all.select do |style|
+        @@all.select do |beer|
             beer.style.include?(style)
         end
     end
