@@ -46,7 +46,7 @@ class UntappdTopBeers::Beer
             beer.css("div.details p.abv").text,
             beer.css("div.details div.rating-container span.num").text,
             beer.css("div.details p.raters").text,
-        )
+            )
     end
 
 end

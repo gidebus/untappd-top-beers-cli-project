@@ -3,7 +3,7 @@ class UntappdTopBeers::CLI
     def call
         UntappdTopBeers::Scraper.new.create_beers
         puts "Welcome to Untappd's top 50 beers!"
-        #select_display
+        select_display
         #displays list of 50 beers
     end
 
@@ -41,14 +41,14 @@ class UntappdTopBeers::CLI
     end
 
     def print_names
-        UntappdTopBeers::Beer.self.all.each do |beer|
+        UntappdTopBeers::Beer.all.each do |beer|
             puts beer.name
         end
     end
 
     def print_styles
         styles =[]
-        UntappdTopBeers::Beer.self.all.each do |beer|
+        UntappdTopBeers::Beer.all.each do |beer|
             styles << beer.style
         end
         styles.uniq.each do |style|
@@ -58,7 +58,7 @@ class UntappdTopBeers::CLI
 
     def print_breweries
         breweries =[]
-        UntappdTopBeers::Beer.self.all.each do |beer|
+        UntappdTopBeers::Beer.all.each do |beer|
             breweries << beer.brewery
         end
         breweries.uniq.each do |brewery|
