@@ -35,6 +35,11 @@ class UntappdTopBeers::Beer
             print beer.name
             puts ""
         end
+        puts ""
+        puts "which beer would you like to see?"
+        puts ""
+        selection = gets.strip
+        self.find_by_name(selection)
     end
 
     def find_by_style(style)
