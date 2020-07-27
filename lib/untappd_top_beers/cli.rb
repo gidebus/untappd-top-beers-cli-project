@@ -67,6 +67,11 @@ class UntappdTopBeers::CLI
         styles.uniq.each do |style|
             puts style
         end
+        puts "which style's beers would you like to see?"
+        puts ""
+        selection = gets.strip 
+        #selection is a string
+        UntappdTopBeers::Beer.find_by_style(selection)
     end
 
     def print_breweries

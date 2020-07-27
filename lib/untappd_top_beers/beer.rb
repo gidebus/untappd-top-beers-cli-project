@@ -42,10 +42,20 @@ class UntappdTopBeers::Beer
         self.find_by_name(selection)
     end
 
-    def find_by_style(style)
-        @@all.select do |beer|
+    def self.find_by_style(style)
+        puts ""
+        beers = @@all.select do |beer|
             beer.style.include?(style)
         end
+        beers.each do |beer|
+            print beer.name
+            puts ""
+        end
+        puts ""
+        puts "which beer would you like to see?"
+        puts ""
+        selection = gets.strip
+        self.find_by_name(selection)
     end
 
     def self.new_from_index_page(beer)
