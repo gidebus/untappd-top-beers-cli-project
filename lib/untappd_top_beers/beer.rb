@@ -19,15 +19,21 @@ class UntappdTopBeers::Beer
         @@all
     end
 
-    def find_by_name(name)
-        @@all.detect do |beer|
+    def self.find_by_name(name)
+        beer = @@all.detect do |beer|
             beer.name == name 
         end
+        UntappdTopBeers::CLI.print_beer(beer)
     end
 
-    def find_by_brewery(brewery)
-        @@all.select do |beer|
+    def self.find_by_brewery(brewery)
+        puts ""
+        beers = @@all.select do |beer|
             beer.brewery == brewery
+        end
+        beers.each do |beer|
+            print beer.name
+            puts ""
         end
     end
 
