@@ -60,14 +60,16 @@ class UntappdTopBeers::Beer
 
     def self.new_from_index_page(beer)
         self.new(
-            beer.css("div.beer-details p.name").text,
-            beer.css("div.beer-details").css("p")[1].text,
-            beer.css("div.beer-details").css("p")[2].text,
-            beer.css("div.beer-details").css("p")[4].text,
-            beer.css("div.details p.abv").text,
-            beer.css("div.details div.rating-container span.num").text,
-            beer.css("div.details p.raters").text,
+            beer.css("div.beer-details p.name").text.strip,
+            beer.css("div.beer-details").css("p")[1].text.strip,
+            beer.css("div.beer-details").css("p")[2].text.strip,
+            beer.css("div.beer-details").css("p")[4].text.strip,
+            beer.css("div.details p.abv").text.strip,
+            beer.css("div.details div.rating-container span.num").text.strip,
+            beer.css("div.details p.raters").text.strip,
             )
+            #send info to the scraper class. Call Beer.new
     end
 
 end
+

@@ -31,11 +31,11 @@ class UntappdTopBeers::CLI
         puts ""
         puts "----------- #{beer.name} ------------"
         puts ""
-        puts "Brewery:           #{beer.brewery}"
-        puts "Style:           #{beer.style}"
-        puts "%ABV:      #{beer.alcohol_content}"
-        puts "Score:           #{beer.score}"
-        puts "Ratings:       #{beer.ratings}"
+        puts "Brewery:#{beer.brewery}"
+        puts "Style:#{beer.style}"
+        puts "%ABV:#{beer.alcohol_content}"
+        puts "Score:#{beer.score}"
+        puts "Ratings:#{beer.ratings}"
     
         puts ""
         puts "--------------- Description --------------"
@@ -47,7 +47,7 @@ class UntappdTopBeers::CLI
     def print_names
         puts ""
         puts "------------ Beer Names ----------------"
-        UntappdTopBeers::Beer.all.each do |beer|
+        UntappdTopBeers::Beer.all.sort_by {|beer| beer.name}.each do |beer|
             puts beer.name
         end
         puts ""
