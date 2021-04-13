@@ -5,7 +5,7 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 ## To Run the program
 
 ```
-ruby cli.rb
+ruby bin/untappd
 ```
 
 ## Installation
